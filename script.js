@@ -65,6 +65,6 @@ async function sendMessage() {
     } catch (error) {
         console.error("Erreur API :", error);
         // Afficher un message d'erreur clair si l'API n'est pas lancée
-        displayMessage("Le Chat-404 est en panne. Vérifiez que l'API Python est bien lancée (http://127.0.0.1:5000).", 'bot');
+        displayMessage("Le Chat-404 est en panne. Vérifiez que l'API Python est bien lancée.", 'bot');
     }
 }
