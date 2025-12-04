@@ -39,13 +39,11 @@ async function sendMessage() {
     
     // 3. Appel au backend Python (l'API)
     try {
-        const response = await fetch('http://127.0.0.1:5000/api/chat', {
+      const RENDER_URL = 'https://chat-404-api.onrender.com'; // <-- VOTRE URL PUBLIQUE
+      const response = await fetch(`${RENDER_URL}/api/chat`, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            // Envoyer la question dans le corps de la requête
-            body: JSON.stringify({ question: userText })
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: userText })
         });
 
         if (!response.ok) {
