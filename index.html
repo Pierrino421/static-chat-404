@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat-404</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap);
+      #chat-container,
+      #input-area {
+        display: flex;
+        background-color: #fff;
+      }
+      body {
+        font-family: Inter, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f8faff;
+      }
+      #chat-container {
+        width: 400px;
+        height: 600px;
+        border: 1px solid #d1d5db;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        flex-direction: column;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      #chat-history {
+        flex-grow: 1;
+        padding: 15px;
+        overflow-y: auto;
+        background-color: #eff6ff;
+      }
+      .message {
+        margin-bottom: 15px;
+        padding: 10px 14px;
+        border-radius: 18px;
+        max-width: 80%;
+        line-height: 1.4;
+      }
+      .user {
+        background-color: #2b6cb0;
+        color: #fff;
+        align-self: flex-end;
+        margin-left: auto;
+      }
+      .bot {
+        background-color: #e5e7eb;
+        color: #1f2937;
+        align-self: flex-start;
+      }
+      #input-area {
+        padding: 15px;
+        border-top: 1px solid #d1d5db;
+      }
+      #user-input {
+        flex-grow: 1;
+        padding: 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        margin-right: 10px;
+        transition: border-color 0.3s;
+      }
+      #user-input:focus {
+        border-color: #4c51bf;
+        outline: 0;
+      }
+      #send-button {
+        padding: 12px 18px;
+        background-color: #4c51bf;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s;
+      }
+      #send-button:hover {
+        background-color: #5a64d1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chat-container">
+      <div id="chat-history">
+        <div class="message bot">
+          Bonjour ! Je suis le Chat-404, le silence est le bruit d'une question
+          mal posée. Posez votre requête.
+        </div>
+      </div>
+      <div id="input-area">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Tapez votre question..."
+        />
+        <button id="send-button" onclick="sendMessage()">Envoyer</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
