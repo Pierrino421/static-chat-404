@@ -1,5 +1,5 @@
 // NOTE: URL de l'API Python. À changer pour l'URL Render/Heroku lors du déploiement.
-const API_URL = 'http://127.0.0.1:5000'; 
+const API_URL = 'https://chat-404-api.onrender.com'; 
 let isLoading = false; // Ajout d'un état global pour le bouton/input
 
 document.addEventListener('DOMContentLoaded', () => {
